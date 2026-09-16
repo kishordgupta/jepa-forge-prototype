@@ -1,0 +1,362 @@
+[
+  {
+    "dataset": "wine",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9406796601699151,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "wine",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.9406796601699151,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "wine",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9797561536691971,
+    "std": 0.017531685192783673,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "wine",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.9622371354005537,
+    "std": 0.043893847342362936,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "wine",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.91407867494824,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "wine",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9696342305037957,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "wine",
+    "task": "first_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8915343915343916,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "wine",
+    "task": "first_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.8915343915343916,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "wine",
+    "task": "first_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9898780768345986,
+    "std": 0.017531685192783673,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "wine",
+    "task": "first_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.94990261002255,
+    "std": 0.017100172647969893,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "wine",
+    "task": "first_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9066382713725708,
+    "std": 0.031535252362622106,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "wine",
+    "task": "first_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9696342305037957,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "digits",
+    "task": "center",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8754692763040689,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "digits",
+    "task": "center",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7406882993858284,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "digits",
+    "task": "center",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.91297363343663,
+    "std": 0.007620486432059865,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "digits",
+    "task": "center",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.833549630762372,
+    "std": 0.014281075847679852,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "digits",
+    "task": "center",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8857383813738712,
+    "std": 0.007544615205845988,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "digits",
+    "task": "center",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9466931750356246,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "digits",
+    "task": "right_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8482655553990777,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "digits",
+    "task": "right_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7603607373651348,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "digits",
+    "task": "right_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.92133475635087,
+    "std": 0.0032038574752234444,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "digits",
+    "task": "right_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8461405961130334,
+    "std": 0.020151432699773392,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "digits",
+    "task": "right_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.869793535150116,
+    "std": 0.0036084479328844974,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "digits",
+    "task": "right_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9466931750356246,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past16_future8",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.25944624550204487,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past16_future8",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.27351164506782405,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past16_future8",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.3578703533424481,
+    "std": 0.003643285859995933,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past16_future8",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.32194517009929113,
+    "std": 0.018111334757864982,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past16_future8",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.32050533927292657,
+    "std": 0.020736247093951606,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past16_future8",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 1.03253721377228,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past12_future12",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.3391257074846498,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past12_future12",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.3434637174671311,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past12_future12",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.45088602630520275,
+    "std": 0.0008068913193760613,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past12_future12",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.4109091218541394,
+    "std": 0.016503208331976802,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past12_future12",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.40424631879140743,
+    "std": 0.04227868479807804,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sensors",
+    "task": "past12_future12",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 1.1494614809661223,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  }
+]

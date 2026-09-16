@@ -1,0 +1,2402 @@
+[
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_worst",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9188034188034188,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_worst",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.9188034188034188,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_worst",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8994837383570271,
+    "std": 0.01158274767313089,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_worst",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.9078870472743108,
+    "std": 0.005720807893517107,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_worst",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9206923943766049,
+    "std": 0.0006239491372336136,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_worst",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.97999297999298,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_error",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9188034188034188,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_error",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.9188034188034188,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_error",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8994837383570271,
+    "std": 0.01158274767313089,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_error",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.9078870472743108,
+    "std": 0.005720807893517107,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_error",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9206923943766049,
+    "std": 0.0006239491372336136,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "breast_cancer",
+    "task": "mean_to_error",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.97999297999298,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "alternating_pairs",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7463768115942028,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "alternating_pairs",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.6723330869672332,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "alternating_pairs",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.895617944147356,
+    "std": 0.014885628010550383,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "alternating_pairs",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8114961409778133,
+    "std": 0.05707155571327131,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "alternating_pairs",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7696053946053946,
+    "std": 0.04634280597905468,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "alternating_pairs",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.8133333333333334,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "first_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8330080242897419,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "first_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7959183673469387,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "first_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8724210056888589,
+    "std": 0.008541837091169418,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "first_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8657645795251522,
+    "std": 0.028392977419213105,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "first_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7979785431335819,
+    "std": 0.01837730106416433,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "ionosphere",
+    "task": "first_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.8133333333333334,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "sonar",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7083333333333334,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "sonar",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.6860264519838988,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "sonar",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8091259972144828,
+    "std": 0.02431414734707875,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "sonar",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.7035052910052911,
+    "std": 0.05263598827907305,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "sonar",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.5967513191845993,
+    "std": 0.0746842718734779,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "sonar",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.7083333333333334,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "sonar",
+    "task": "first_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.6377228292121909,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "sonar",
+    "task": "first_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.641025641025641,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "sonar",
+    "task": "first_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.7614889427708486,
+    "std": 0.02333712996405359,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "sonar",
+    "task": "first_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.6609903476380492,
+    "std": 0.02207231218280904,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "sonar",
+    "task": "first_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.5728949703451174,
+    "std": 0.009334453985590423,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "sonar",
+    "task": "first_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.7083333333333334,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "semeion",
+    "task": "center",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9087437895584424,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "semeion",
+    "task": "center",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7941500946997367,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "semeion",
+    "task": "center",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9078548425136962,
+    "std": 0.007423641773684597,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "semeion",
+    "task": "center",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.7218941888577177,
+    "std": 0.020784666837956035,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "semeion",
+    "task": "center",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8485320937104999,
+    "std": 0.006381239368990361,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "semeion",
+    "task": "center",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9403408201596614,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "semeion",
+    "task": "right_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7807269166136491,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "semeion",
+    "task": "right_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.674500931734127,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "semeion",
+    "task": "right_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8358009625475683,
+    "std": 0.0076284114519662985,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "semeion",
+    "task": "right_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.6401847302031153,
+    "std": 0.03713636920631046,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "semeion",
+    "task": "right_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7458819140505611,
+    "std": 0.04457670063962317,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "semeion",
+    "task": "right_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9403408201596614,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "letter",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.49830475063859647,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "letter",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.49690407053534597,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "letter",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.6999823379537237,
+    "std": 0.010926726905327547,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "letter",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.6023899539058685,
+    "std": 0.011526966881978082,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "letter",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.522344087887323,
+    "std": 0.002198270826449223,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "letter",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.6960660033930556,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "letter",
+    "task": "first_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.2976467419917536,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "letter",
+    "task": "first_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.2976467419917536,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "letter",
+    "task": "first_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.44737980677269196,
+    "std": 0.002912694694715512,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "letter",
+    "task": "first_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.3963049881636262,
+    "std": 0.010750249802812578,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "letter",
+    "task": "first_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.32866361570856384,
+    "std": 0.011125120698928003,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "letter",
+    "task": "first_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.6960660033930556,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "pendigits",
+    "task": "alternating_pairs",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.832918711836807,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "pendigits",
+    "task": "alternating_pairs",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.832918711836807,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "pendigits",
+    "task": "alternating_pairs",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9105348548945926,
+    "std": 0.0013530459021166273,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "pendigits",
+    "task": "alternating_pairs",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.9008188252962269,
+    "std": 0.0008442619389900872,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "pendigits",
+    "task": "alternating_pairs",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8976048387348511,
+    "std": 0.005337429380296911,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "pendigits",
+    "task": "alternating_pairs",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9246710443200007,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "pendigits",
+    "task": "first_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7030316825453428,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "pendigits",
+    "task": "first_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7030316825453428,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "pendigits",
+    "task": "first_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8266908128081402,
+    "std": 0.007727333227464548,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "pendigits",
+    "task": "first_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8276044323916167,
+    "std": 0.004484123109733757,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "pendigits",
+    "task": "first_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8187202714119793,
+    "std": 0.014515913341241207,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "pendigits",
+    "task": "first_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9246710443200007,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "satimage",
+    "task": "neighbor_to_center",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8062063661187966,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "satimage",
+    "task": "neighbor_to_center",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7917484874436423,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "satimage",
+    "task": "neighbor_to_center",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8677703698625673,
+    "std": 0.008316505117128623,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "satimage",
+    "task": "neighbor_to_center",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8391317658219216,
+    "std": 0.009898871442495277,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "satimage",
+    "task": "neighbor_to_center",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7990734709254403,
+    "std": 0.01979677722326331,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "satimage",
+    "task": "neighbor_to_center",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.8133032320628969,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "satimage",
+    "task": "spectral_halves",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7457634395586864,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "satimage",
+    "task": "spectral_halves",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7338444139106141,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "satimage",
+    "task": "spectral_halves",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8361328961524931,
+    "std": 0.0025234223068256456,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "satimage",
+    "task": "spectral_halves",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8018963866123565,
+    "std": 0.012153509967239165,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "satimage",
+    "task": "spectral_halves",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7612357434107525,
+    "std": 0.02341017985006361,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "satimage",
+    "task": "spectral_halves",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.8133032320628969,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "har",
+    "task": "time_to_frequency",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9290764085485493,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "har",
+    "task": "time_to_frequency",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.8036281545968911,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "har",
+    "task": "time_to_frequency",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9159304959151932,
+    "std": 0.0014672951037730982,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "har",
+    "task": "time_to_frequency",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.7885844278316673,
+    "std": 0.007519204338524624,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "har",
+    "task": "time_to_frequency",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7961278829198887,
+    "std": 0.014351917609733401,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "har",
+    "task": "time_to_frequency",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9120815235718189,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "har",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.896631152195062,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "har",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.8304698394312089,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "har",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9148421358265866,
+    "std": 0.013565916467302147,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "har",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.7829028609474061,
+    "std": 0.03193395572741204,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "har",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.773281515835953,
+    "std": 0.015250102026346387,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "har",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9120815235718189,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9139748600510259,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.9139748600510259,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9155952120667399,
+    "std": 0.0027607546544781477,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.9226946401174451,
+    "std": 0.007881601642174883,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9138362240353929,
+    "std": 0.0021925830401405546,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9433079970798478,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "first_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9203307712827176,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "first_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.9217993267818664,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "first_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8991348927937511,
+    "std": 0.00572774237852401,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "first_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.920617163949287,
+    "std": 0.0013500265993675485,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "first_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9019447419504057,
+    "std": 0.006844600892788124,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "dry_bean",
+    "task": "first_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9433079970798478,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "isolet",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9285890987328114,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "isolet",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.7108650746338155,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "isolet",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.931770940732807,
+    "std": 0.005758067058628212,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "isolet",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.7034223019420792,
+    "std": 0.01307814499648232,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "isolet",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7476046342666862,
+    "std": 0.005463994789942813,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "isolet",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.934400954982677,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "isolet",
+    "task": "first_half",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.6683989001467903,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "isolet",
+    "task": "first_half",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.45200281227934297,
+    "std": 6.798699777552591e-17,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "isolet",
+    "task": "first_half",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.6420129777068259,
+    "std": 0.01158401456112284,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "isolet",
+    "task": "first_half",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.52189915671955,
+    "std": 0.012835586470512715,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "isolet",
+    "task": "first_half",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.5367457045597468,
+    "std": 0.030131568714454975,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "isolet",
+    "task": "first_half",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.934400954982677,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past24_future8",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 2.3842392408518505,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past24_future8",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 5.050597575381782,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past24_future8",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.5890425595104652,
+    "std": 0.0018318021225673228,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past24_future8",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 1.8848840224242742,
+    "std": 0.0938494937730502,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past24_future8",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.8504364713445947,
+    "std": 0.07232919590685613,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past24_future8",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 5.673478899891815,
+    "std": 1.0877919644084146e-15,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past16_future16",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 4.934198519621052,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past16_future16",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 5.981186312228519,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past16_future16",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.7815128856117443,
+    "std": 0.00969203752433214,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past16_future16",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 3.7730854133114247,
+    "std": 0.06920214288328833,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past16_future16",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 1.2968564260541495,
+    "std": 0.056760746371384584,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_lorenz",
+    "task": "past16_future16",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 8.63676628556008,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past24_future8",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.07829610111908408,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past24_future8",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.10866454789357634,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past24_future8",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.08656537828354043,
+    "std": 0.0005079506911214437,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past24_future8",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.09398661664201217,
+    "std": 0.006690778768520676,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past24_future8",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.08929268286227027,
+    "std": 0.004639549302773496,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past24_future8",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.2044755778641829,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past16_future16",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.14063089995281278,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past16_future16",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.1515957949897141,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past16_future16",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.12608253301103392,
+    "std": 0.0008447211908545237,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past16_future16",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.13392716462195145,
+    "std": 0.002492930685266009,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past16_future16",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.13120275320703909,
+    "std": 0.002629869743111386,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_mackey_glass",
+    "task": "past16_future16",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.3352622463620975,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past24_future8",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.184858093881714,
+    "std": 3.3993498887762956e-17,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past24_future8",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.18352643394070978,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past24_future8",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.17891322430498904,
+    "std": 0.00015821192987771132,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past24_future8",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.1883834093026279,
+    "std": 0.000309554356173287,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past24_future8",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.18307444466303577,
+    "std": 0.001188756322534069,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past24_future8",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.22612756675128043,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past16_future16",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.18988873910313267,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past16_future16",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.18860415773670156,
+    "std": 3.3993498887762956e-17,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past16_future16",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.18633807350684217,
+    "std": 0.00016567695334496587,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past16_future16",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.1910065852367336,
+    "std": 0.0009304756585725941,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past16_future16",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.18812602495335343,
+    "std": 0.0009450262784813665,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_switching_var",
+    "task": "past16_future16",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.24126527871327264,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past24_future8",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.16191945771588626,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past24_future8",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.34290319381626677,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past24_future8",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.19675569671838034,
+    "std": 0.0002362670921665416,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past24_future8",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.2574389021103402,
+    "std": 0.010183642262671476,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past24_future8",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.21062483634213616,
+    "std": 0.015106225484433893,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past24_future8",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.7464613080662638,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past16_future16",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.2830489803449146,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past16_future16",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.39633134134514897,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past16_future16",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.26502868229039117,
+    "std": 0.001065827777845229,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past16_future16",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.34658091269533214,
+    "std": 0.0073764508364502455,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past16_future16",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.2787750118682973,
+    "std": 0.010457859320624515,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_chirp_seasonal",
+    "task": "past16_future16",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.9787544742637846,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past24_future8",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.035695089047837206,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past24_future8",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.04306491710000298,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past24_future8",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.13057112683383335,
+    "std": 0.0006236252578836267,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past24_future8",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.07853841018098484,
+    "std": 0.00369498348069462,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past24_future8",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.13836935134417436,
+    "std": 0.006918236458419657,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past24_future8",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.23117377824504282,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past16_future16",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.06414030418687076,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past16_future16",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.06488091646296966,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past16_future16",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.14489116909684432,
+    "std": 0.0008391998162276106,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past16_future16",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.09387541732778122,
+    "std": 0.004730646628336659,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past16_future16",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.1471707332719783,
+    "std": 0.0194974239049183,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_coupled_oscillators",
+    "task": "past16_future16",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.4321379789804047,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past24_future8",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.09803815581167565,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past24_future8",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.10067110860415253,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past24_future8",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.1205965025455118,
+    "std": 0.00027873416045488423,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past24_future8",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.10707163717871997,
+    "std": 0.002082046732180098,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past24_future8",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.11516429527625995,
+    "std": 0.007502421828468306,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past24_future8",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.12177814669843427,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past16_future16",
+    "method": "raw_context_linear",
+    "metric": "rmse",
+    "mean": 0.10325744214904921,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past16_future16",
+    "method": "raw_context_pca",
+    "metric": "rmse",
+    "mean": 0.10440113090865627,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past16_future16",
+    "method": "raw_context_extra_trees",
+    "metric": "rmse",
+    "mean": 0.1244039954100582,
+    "std": 0.00023586468285561894,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past16_future16",
+    "method": "random_encoder_linear",
+    "metric": "rmse",
+    "mean": 0.11188023571375144,
+    "std": 0.003568485896913177,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past16_future16",
+    "method": "jepa_context_linear",
+    "metric": "rmse",
+    "mean": 0.11456118363367075,
+    "std": 0.007503402739860444,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_ar",
+    "task": "past16_future16",
+    "method": "persistence",
+    "metric": "rmse",
+    "mean": 0.12842826722670825,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8487294336087312,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.8459961607166284,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9192133415117909,
+    "std": 0.007348657273347469,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "view_a_to_view_b",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8878680522857142,
+    "std": 0.017588907942189428,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "view_a_to_view_b",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8803956409198207,
+    "std": 0.010823469067914655,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "view_a_to_view_b",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.8587826325126039,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8456761808653371,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.846082868440195,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9005406337435042,
+    "std": 0.007519778692102567,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8837278528368545,
+    "std": 0.007413095552078681,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8797627801189275,
+    "std": 0.013794430957284026,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_nonlinear_multiview",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.8587826325126039,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9498678339055493,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.9499583631146136,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9613783291756554,
+    "std": 0.0027284355509092227,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "view_a_to_view_b",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.9515773919987733,
+    "std": 0.0031862137049300356,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "view_a_to_view_b",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9630597170890774,
+    "std": 0.0052527159071253235,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "view_a_to_view_b",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9597942625325993,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9596764404076219,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.9619973120996169,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9640190615117827,
+    "std": 0.0015375684825492096,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.9454743141501681,
+    "std": 0.001304130325846317,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.9624228084223119,
+    "std": 0.004455989450330813,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_hierarchical_multiclass",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9597942625325993,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.664698228405565,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.5069833046619079,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.6572005406330124,
+    "std": 0.01125374007109085,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "view_a_to_view_b",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.6000761175904046,
+    "std": 0.026769348852097943,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "view_a_to_view_b",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.5779039389856911,
+    "std": 0.018375828316504354,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "view_a_to_view_b",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9349853717086344,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.934993499349935,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.5642370347850321,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.8891489985187185,
+    "std": 0.01844588722078346,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.7099219156855092,
+    "std": 0.019786449584540663,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7565813570617198,
+    "std": 0.020318825226929002,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_sparse_interactions",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9349853717086344,
+    "std": 1.3597399555105182e-16,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7364751895931544,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.751024520081424,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "view_a_to_view_b",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.9578049755352733,
+    "std": 0.0028607665065735594,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "view_a_to_view_b",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.8594875429543744,
+    "std": 0.004123581090987714,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "view_a_to_view_b",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.7650463242175806,
+    "std": 0.027963096616184267,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "view_a_to_view_b",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9318646922443131,
+    "std": 0.0,
+    "n": 3,
+    "primary": true
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "alternating",
+    "method": "raw_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.908168743155399,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "alternating",
+    "method": "raw_context_pca",
+    "metric": "macro_f1",
+    "mean": 0.6587466980304574,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "alternating",
+    "method": "raw_context_extra_trees",
+    "metric": "macro_f1",
+    "mean": 0.953208922409214,
+    "std": 0.009178639279368418,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "alternating",
+    "method": "random_encoder_linear",
+    "metric": "macro_f1",
+    "mean": 0.7877080379456566,
+    "std": 0.02225849377494611,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "alternating",
+    "method": "jepa_context_linear",
+    "metric": "macro_f1",
+    "mean": 0.8426537862669644,
+    "std": 0.030858845333232316,
+    "n": 3,
+    "primary": false
+  },
+  {
+    "dataset": "synthetic_manifold_nuisance",
+    "task": "alternating",
+    "method": "full_raw_linear_reference",
+    "metric": "macro_f1",
+    "mean": 0.9318646922443131,
+    "std": 0.0,
+    "n": 3,
+    "primary": false
+  }
+]

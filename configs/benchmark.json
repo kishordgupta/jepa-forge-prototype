@@ -1,0 +1,14 @@
+{
+  "datasets": ["wine", "digits", "synthetic_sensors"],
+  "split_seed": 2026,
+  "model_seeds": [7, 17, 27],
+  "epochs": 60,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "latent_dim": 32,
+  "ema": 0.99,
+  "variance_weight": 1.0,
+  "device": "mps",
+  "primary_policy": "first_declared",
+  "notes": "All declared policies are evaluated. First policy is primary a priori; no selection using test results. Frozen embeddings and baselines share train/validation/test indices."
+}

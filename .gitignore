@@ -9,3 +9,5 @@ tmp/
 artifacts/
 *.pt
 *.npz
+build/
+dist/

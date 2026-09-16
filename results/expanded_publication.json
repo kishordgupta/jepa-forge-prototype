@@ -1,0 +1,13 @@
+{
+  "path": "results/expanded_benchmark.json.gz",
+  "compressed_bytes": 1260221,
+  "compressed_sha256": "d88a4dd0bcbc366e656037f723feda5500ede7c343dbf2e900ee796434c0fa17",
+  "uncompressed_bytes": 9605230,
+  "uncompressed_sha256": "8f223e56d42f1a23bda989cdfa1419c2e261843627fd1e4db8f007dc1c8d90a5",
+  "gzip_mtime": 0,
+  "markdown_sha256": "1f78a005aa10288c4e8baf563b6735d8bc782cb4d9e69ea8e4d100f79428aac4",
+  "pdf_sha256": "a8d5f35e6d84249e0493a78cd5ce7565d210a21d3675b8d27ded2b41e32eb452",
+  "validation_sha256": "534f0cc3ee90b6abafe9cc06367fac936dd9c8a1cab4a538a0a32738f064becb",
+  "tests_sha256": "ffb967b39abf1a3ff04dd81706e1a5bbb8faa924e1ddd0be9839639f75e6ab1e",
+  "comparison_figure_sha256": "0a413f085ff473dbe68c70042f1112b821f8ad6f737ef9821e06026228f9b622"
+}

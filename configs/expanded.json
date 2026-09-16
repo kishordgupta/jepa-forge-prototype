@@ -1,0 +1,14 @@
+{
+  "datasets": ["breast_cancer", "ionosphere", "sonar", "semeion", "letter", "pendigits", "satimage", "har", "dry_bean", "isolet", "synthetic_lorenz", "synthetic_mackey_glass", "synthetic_switching_var", "synthetic_chirp_seasonal", "synthetic_coupled_oscillators", "synthetic_nonlinear_ar", "synthetic_nonlinear_multiview", "synthetic_hierarchical_multiclass", "synthetic_sparse_interactions", "synthetic_manifold_nuisance"],
+  "split_seed": 2026,
+  "model_seeds": [7, 17, 27],
+  "epochs": 60,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "latent_dim": 32,
+  "ema": 0.99,
+  "variance_weight": 1.0,
+  "device": "mps",
+  "primary_policy": "first_declared",
+  "notes": "Twenty additional dataset families. Ten public samples and ten distinct synthetic mechanisms. All two declared policies evaluated with three model seeds on one fixed split. First policy primary before test evaluation. Public datasets bounded to 3000 rows with label-independent sampling; known entities kept together. No hyperparameter or policy selection on the test set. Same 60-epoch JEPA pilot and probe grids as initial three-dataset study."
+}

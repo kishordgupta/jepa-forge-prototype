@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "tests_passed": 44,
+  "test_failures": 0,
+  "completed_gpu_runs": 18,
+  "audited_tasks": 6,
+  "export_reload_checks": 6,
+  "checkpoint_reload_checks": 18,
+  "actual_device": "mps:0",
+  "runtime_source_hashes_match": true,
+  "low_rank_warning_runs": 7
+}

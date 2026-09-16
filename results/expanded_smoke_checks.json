@@ -1,0 +1,1005 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "dataset": "breast_cancer",
+      "task": "mean_to_worst",
+      "shape": [
+        569,
+        30
+      ],
+      "split_sizes": {
+        "train": 341,
+        "val": 114,
+        "test": 114
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "breast_cancer",
+      "task": "mean_to_error",
+      "shape": [
+        569,
+        30
+      ],
+      "split_sizes": {
+        "train": 341,
+        "val": 114,
+        "test": 114
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "ionosphere",
+      "task": "alternating_pairs",
+      "shape": [
+        350,
+        34
+      ],
+      "split_sizes": {
+        "train": 210,
+        "val": 70,
+        "test": 70
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "ionosphere",
+      "task": "first_half",
+      "shape": [
+        350,
+        34
+      ],
+      "split_sizes": {
+        "train": 210,
+        "val": 70,
+        "test": 70
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "sonar",
+      "task": "alternating",
+      "shape": [
+        208,
+        60
+      ],
+      "split_sizes": {
+        "train": 124,
+        "val": 42,
+        "test": 42
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "sonar",
+      "task": "first_half",
+      "shape": [
+        208,
+        60
+      ],
+      "split_sizes": {
+        "train": 124,
+        "val": 42,
+        "test": 42
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "semeion",
+      "task": "center",
+      "shape": [
+        1593,
+        256
+      ],
+      "split_sizes": {
+        "train": 955,
+        "val": 319,
+        "test": 319
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "semeion",
+      "task": "right_half",
+      "shape": [
+        1593,
+        256
+      ],
+      "split_sizes": {
+        "train": 955,
+        "val": 319,
+        "test": 319
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "letter",
+      "task": "alternating",
+      "shape": [
+        3000,
+        16
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "letter",
+      "task": "first_half",
+      "shape": [
+        3000,
+        16
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "pendigits",
+      "task": "alternating_pairs",
+      "shape": [
+        2992,
+        16
+      ],
+      "split_sizes": {
+        "train": 1768,
+        "val": 612,
+        "test": 612
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "pendigits",
+      "task": "first_half",
+      "shape": [
+        2992,
+        16
+      ],
+      "split_sizes": {
+        "train": 1768,
+        "val": 612,
+        "test": 612
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "satimage",
+      "task": "neighbor_to_center",
+      "shape": [
+        3000,
+        36
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "satimage",
+      "task": "spectral_halves",
+      "shape": [
+        3000,
+        36
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "har",
+      "task": "time_to_frequency",
+      "shape": [
+        3000,
+        561
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "har",
+      "task": "alternating",
+      "shape": [
+        3000,
+        561
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "task": "alternating",
+      "shape": [
+        3000,
+        16
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "task": "first_half",
+      "shape": [
+        3000,
+        16
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "isolet",
+      "task": "alternating",
+      "shape": [
+        3000,
+        617
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "isolet",
+      "task": "first_half",
+      "shape": [
+        3000,
+        617
+      ],
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_lorenz",
+      "task": "past24_future8",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_lorenz",
+      "task": "past16_future16",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_mackey_glass",
+      "task": "past24_future8",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_mackey_glass",
+      "task": "past16_future16",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_switching_var",
+      "task": "past24_future8",
+      "shape": [
+        2000,
+        128
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_switching_var",
+      "task": "past16_future16",
+      "shape": [
+        2000,
+        128
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_chirp_seasonal",
+      "task": "past24_future8",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_chirp_seasonal",
+      "task": "past16_future16",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_coupled_oscillators",
+      "task": "past24_future8",
+      "shape": [
+        2000,
+        128
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_coupled_oscillators",
+      "task": "past16_future16",
+      "shape": [
+        2000,
+        128
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_nonlinear_ar",
+      "task": "past24_future8",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_nonlinear_ar",
+      "task": "past16_future16",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_nonlinear_multiview",
+      "task": "view_a_to_view_b",
+      "shape": [
+        2000,
+        64
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_nonlinear_multiview",
+      "task": "alternating",
+      "shape": [
+        2000,
+        64
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_hierarchical_multiclass",
+      "task": "view_a_to_view_b",
+      "shape": [
+        2000,
+        80
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_hierarchical_multiclass",
+      "task": "alternating",
+      "shape": [
+        2000,
+        80
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_sparse_interactions",
+      "task": "view_a_to_view_b",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_sparse_interactions",
+      "task": "alternating",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_manifold_nuisance",
+      "task": "view_a_to_view_b",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    },
+    {
+      "dataset": "synthetic_manifold_nuisance",
+      "task": "alternating",
+      "shape": [
+        2000,
+        96
+      ],
+      "split_sizes": {
+        "train": 1200,
+        "val": 400,
+        "test": 400
+      },
+      "device_evidence": {
+        "requested_device": "mps",
+        "online_parameter_device": "mps:0",
+        "target_parameter_device": "mps:0",
+        "context_batch_device": "mps:0",
+        "target_batch_device": "mps:0",
+        "loss_device": "mps:0",
+        "online_gradient_device": "mps:0",
+        "target_requires_grad": false,
+        "target_has_gradient": false,
+        "gpu_fallback_enabled": false
+      }
+    }
+  ]
+}

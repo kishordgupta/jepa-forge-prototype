@@ -1,0 +1,432 @@
+{
+  "status": "passed",
+  "datasets": [
+    {
+      "dataset": "breast_cancer",
+      "shape": [
+        569,
+        30
+      ],
+      "modality": "tabular",
+      "source_full_rows": 569,
+      "source_sha256": "bc154869ef13f753f9e2b5a17e248cfe1ba4b6721db7c4da9f4880e40b05d3af",
+      "sample_indices_sha256": "a7a0c058c22cc0b88ea47e9eb61e5cfbeeed1769206accbf6a59978d8111e91f",
+      "sample_selection": {
+        "method": "all unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 0,
+        "unique_source_rows": 569
+      },
+      "classes": 2,
+      "group_count": 569,
+      "split_sizes": {
+        "train": 341,
+        "val": 114,
+        "test": 114
+      },
+      "tasks": [
+        {
+          "name": "mean_to_worst",
+          "context": 10,
+          "target": 10,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "mean_to_error",
+          "context": 10,
+          "target": 10,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "dataset": "ionosphere",
+      "shape": [
+        350,
+        34
+      ],
+      "modality": "sequence",
+      "source_full_rows": 351,
+      "source_sha256": "4d218ece62756c99659011a13052d06464f13cb2b3d0410ce2aef16de1403860",
+      "sample_indices_sha256": "976f472ce963cc9a5b01f3a8df4e3a985b280ee2603e28112d4c215219c502be",
+      "sample_selection": {
+        "method": "all unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 1,
+        "unique_source_rows": 350
+      },
+      "classes": 2,
+      "group_count": null,
+      "split_sizes": {
+        "train": 210,
+        "val": 70,
+        "test": 70
+      },
+      "tasks": [
+        {
+          "name": "alternating_pairs",
+          "context": 18,
+          "target": 16,
+          "status": "passed",
+          "warnings": [
+            "constant_context"
+          ]
+        },
+        {
+          "name": "first_half",
+          "context": 16,
+          "target": 18,
+          "status": "passed",
+          "warnings": [
+            "constant_context"
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "sonar",
+      "shape": [
+        208,
+        60
+      ],
+      "modality": "sequence",
+      "source_full_rows": 208,
+      "source_sha256": "088b0b6813fb5ab84736bc2a1e3d6bb886e317520d2f2c04152e2ed65af7a18d",
+      "sample_indices_sha256": "714c9068559488fc60c7475070dfe380606647aec734e2a2af423170b89470ac",
+      "sample_selection": {
+        "method": "all unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 0,
+        "unique_source_rows": 208
+      },
+      "classes": 2,
+      "group_count": null,
+      "split_sizes": {
+        "train": 124,
+        "val": 42,
+        "test": 42
+      },
+      "tasks": [
+        {
+          "name": "alternating",
+          "context": 30,
+          "target": 30,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "first_half",
+          "context": 30,
+          "target": 30,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "dataset": "semeion",
+      "shape": [
+        1593,
+        256
+      ],
+      "modality": "image",
+      "source_full_rows": 1593,
+      "source_sha256": "6fb091394714cddda5751d4e1c2781ab094e7cf15de07917fb40e581f19efc75",
+      "sample_indices_sha256": "93224ed88079461b3c9ee4a35fc5b4370ca3e234d5a26cab1991d6d1d707d495",
+      "sample_selection": {
+        "method": "all unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 0,
+        "unique_source_rows": 1593
+      },
+      "classes": 10,
+      "group_count": null,
+      "split_sizes": {
+        "train": 955,
+        "val": 319,
+        "test": 319
+      },
+      "tasks": [
+        {
+          "name": "center",
+          "context": 192,
+          "target": 64,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "right_half",
+          "context": 128,
+          "target": 128,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "dataset": "letter",
+      "shape": [
+        3000,
+        16
+      ],
+      "modality": "tabular",
+      "source_full_rows": 20000,
+      "source_sha256": "3b5f07a334697b6cace4fbae22940393a18fee596e73f68d97ce5973d52dc60f",
+      "sample_indices_sha256": "9c30f891807fa748d9eaeceb74526b847c1f1beae374be21173c4440dfa92670",
+      "sample_selection": {
+        "method": "seeded uniform sample of 3000 unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 1332,
+        "unique_source_rows": 18668
+      },
+      "classes": 26,
+      "group_count": null,
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "tasks": [
+        {
+          "name": "alternating",
+          "context": 8,
+          "target": 8,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "first_half",
+          "context": 8,
+          "target": 8,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "dataset": "pendigits",
+      "shape": [
+        2992,
+        16
+      ],
+      "modality": "sequence",
+      "source_full_rows": 10992,
+      "source_sha256": "1e02bea023613c2b11c9492f6f34caf975420455934f3527d270cee9a1f03b64",
+      "sample_indices_sha256": "0fb8cb9e509c8d1a69a6ffce4bf395578b7a1a1280ffa92a9a1bb9b5b13c6837",
+      "sample_selection": {
+        "method": "seeded uniform sampling up to 68 rows per source group; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 0,
+        "unique_source_rows": 10992
+      },
+      "classes": 10,
+      "group_count": 44,
+      "split_sizes": {
+        "train": 1768,
+        "val": 612,
+        "test": 612
+      },
+      "tasks": [
+        {
+          "name": "alternating_pairs",
+          "context": 8,
+          "target": 8,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "first_half",
+          "context": 8,
+          "target": 8,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "dataset": "satimage",
+      "shape": [
+        3000,
+        36
+      ],
+      "modality": "tabular",
+      "source_full_rows": 6435,
+      "source_sha256": "7c54e0e11c872a1b0b647da370d596dcb06746159cce4121d92ccd70b7d7ce3c",
+      "sample_indices_sha256": "9bf4a14347a4dd2c2283550a0308b69cf9be5ff76b271796b4c986ddf8fb0835",
+      "sample_selection": {
+        "method": "seeded uniform sample of 3000 unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 0,
+        "unique_source_rows": 6435
+      },
+      "classes": 6,
+      "group_count": null,
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "tasks": [
+        {
+          "name": "neighbor_to_center",
+          "context": 32,
+          "target": 4,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "spectral_halves",
+          "context": 18,
+          "target": 18,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "dataset": "har",
+      "shape": [
+        3000,
+        561
+      ],
+      "modality": "tabular",
+      "source_full_rows": 10299,
+      "source_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+      "sample_indices_sha256": "bb0bad3daacbf176fdc44afa9b10817b1fbf9acd27687b9f366ea3c943c942d3",
+      "sample_selection": {
+        "method": "seeded uniform sampling up to 100 rows per source group; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 0,
+        "unique_source_rows": 10299
+      },
+      "classes": 6,
+      "group_count": 30,
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "tasks": [
+        {
+          "name": "time_to_frequency",
+          "context": 265,
+          "target": 289,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "alternating",
+          "context": 281,
+          "target": 280,
+          "status": "passed",
+          "warnings": [
+            "trivial_target_copy"
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "dry_bean",
+      "shape": [
+        3000,
+        16
+      ],
+      "modality": "tabular",
+      "source_full_rows": 13611,
+      "source_sha256": "0a64eff5be87f48c3dbbfc0a12a56c5d5b5167ef8e61cd45d69b3e7c7130c06f",
+      "sample_indices_sha256": "55b14a73fa0496bac67eb3879412aa0b320595930310baa43a4394215b79cacc",
+      "sample_selection": {
+        "method": "seeded uniform sample of 3000 unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 68,
+        "unique_source_rows": 13543
+      },
+      "classes": 7,
+      "group_count": null,
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "tasks": [
+        {
+          "name": "alternating",
+          "context": 8,
+          "target": 8,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "first_half",
+          "context": 8,
+          "target": 8,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "dataset": "isolet",
+      "shape": [
+        3000,
+        617
+      ],
+      "modality": "tabular",
+      "source_full_rows": 7797,
+      "source_sha256": "fe2e0d45f1057d112e051d309070992fc178e7f6922cc7b4e8b2bd310303a053",
+      "sample_indices_sha256": "8081b389f0daa0c8bf654cc0fe361175336c555bb93d09ab805b6382e06c1b94",
+      "sample_selection": {
+        "method": "seeded uniform sample of 3000 unique feature rows; labels unused",
+        "seed": 2026,
+        "max_rows": 3000,
+        "deduplication": "retain first source occurrence of identical feature vectors, independent of labels and before splitting",
+        "duplicate_rows_removed": 0,
+        "unique_source_rows": 7797
+      },
+      "classes": 26,
+      "group_count": null,
+      "split_sizes": {
+        "train": 1800,
+        "val": 600,
+        "test": 600
+      },
+      "tasks": [
+        {
+          "name": "alternating",
+          "context": 309,
+          "target": 308,
+          "status": "passed",
+          "warnings": []
+        },
+        {
+          "name": "first_half",
+          "context": 308,
+          "target": 309,
+          "status": "passed",
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 1.1511597499484196
+}

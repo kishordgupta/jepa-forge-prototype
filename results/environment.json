@@ -1,0 +1,54 @@
+{
+  "recorded_utc": "2026-09-16T15:31:21.305346+00:00",
+  "python": "3.12.14",
+  "os": "Darwin",
+  "os_version": "26.6.2",
+  "architecture": "arm64",
+  "hardware": {
+    "chip": "Apple M3 Max",
+    "cpu_cores": 16,
+    "gpu_cores": 40,
+    "unified_memory_gb": 128,
+    "hardware_source": "system_profiler SPHardwareDataType SPDisplaysDataType"
+  },
+  "packages": {
+    "torch": "2.14.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1",
+    "reportlab": "5.0.1",
+    "pypdf": "6.19.0"
+  },
+  "device": {
+    "cuda_available": false,
+    "mps_built": true,
+    "mps_available": true
+  },
+  "mps_validation": {
+    "status": "passed",
+    "operation": "float32 matrix multiplication, squared mean loss, backward",
+    "input_shapes": [
+      [
+        128,
+        64
+      ],
+      [
+        64,
+        32
+      ]
+    ],
+    "output_device": "mps:0",
+    "gradient_device": "mps:0",
+    "loss": 60.66328430175781,
+    "cpu_loss": 60.66328048706055,
+    "forward_max_absolute_error": 0.0,
+    "x_gradient_max_absolute_error": 0.0,
+    "w_gradient_max_absolute_error": 0.0,
+    "comparison_atol": 2e-05,
+    "comparison_rtol": 0.0001,
+    "synchronized_forward_backward_seconds": 0.2331050420179963,
+    "timing_note": "Single verification including first-use overhead; not a benchmark."
+  }
+}
