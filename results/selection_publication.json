@@ -1,0 +1,11 @@
+{
+  "result_uncompressed_sha256": "bf0fe685a9834a95d6cbffe80b0c9c2c258838f66c18e55a34dc84f2f704d63d",
+  "published_files_sha256": {
+    "results/selection_benchmark.json.gz": "8911411658942314faa0f9356f2d065991ac7cda3c91ad11c9ab6e250e1d7549",
+    "SELECTION_REPORT.md": "d3c48ec897e001c39bd142d612aa8b19abb8a926a0ca6256468365a11ad5e341",
+    "output/pdf/JEPA_FORGE_Automatic_Selection_Report.pdf": "4d310ba8f34a8bc0d5b8c59a0fda3be65ef6291e8198cf09dfc72f66aeab9ea2",
+    "results/selection_summary.json": "948c4a789564888e77f5bd359c373557f0c407bb6f9bdc6ebfa8d0dc2f81df56",
+    "results/selection_validation.json": "1828cd90fdf5236644ba2a2b118516cdec753dd61f5a528fa487bdf27d37267c",
+    "results/selection_test_report.xml": "5463ff1df34e5a65f40d2bfac027f0858c45cb6bde634c5e642097336f427869"
+  }
+}

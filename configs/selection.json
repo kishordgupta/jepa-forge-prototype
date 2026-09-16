@@ -1,0 +1,42 @@
+{
+  "datasets": [
+    "wine",
+    "digits",
+    "synthetic_sensors",
+    "breast_cancer",
+    "ionosphere",
+    "sonar",
+    "semeion",
+    "letter",
+    "pendigits",
+    "satimage",
+    "har",
+    "dry_bean",
+    "isolet",
+    "synthetic_lorenz",
+    "synthetic_mackey_glass",
+    "synthetic_switching_var",
+    "synthetic_chirp_seasonal",
+    "synthetic_coupled_oscillators",
+    "synthetic_nonlinear_ar",
+    "synthetic_nonlinear_multiview",
+    "synthetic_hierarchical_multiclass",
+    "synthetic_sparse_interactions",
+    "synthetic_manifold_nuisance"
+  ],
+  "split_seed": 3026,
+  "model_seeds": [
+    7,
+    17,
+    27
+  ],
+  "epochs": 60,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "latent_dim": 32,
+  "ema": 0.99,
+  "variance_weight": 1.0,
+  "device": "mps",
+  "notes": "Automatic candidate selection using development data only; all dataset locks written before any test evaluation. Equal context budgets and a shared forecasting target per dataset. See docs/SELECTION_PROTOCOL.md.",
+  "data_seed": 2026
+}

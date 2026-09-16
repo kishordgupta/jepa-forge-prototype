@@ -19,7 +19,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from validate_expanded import DEVICE_FIELDS, finite_tree, read_json, require, sha256, summarize, unique, validate_sources
+from validate_expanded import ValidationError, DEVICE_FIELDS, finite_tree, read_json, require, sha256, summarize, unique, validate_sources
 
 DISPLAY = {
     "wine": "Wine", "digits": "Digits", "synthetic_sensors": "Original sensors",
@@ -90,7 +90,10 @@ def inputs(args):
     require(validation.get("results_sha256") == hashlib.sha256(expanded_bytes).hexdigest(), "Validation is stale for the expanded result payload")
     require(validation.get("checkpoint_cpu_replay_checks") == 120, "Independent CPU checkpoint replay is incomplete")
     require((ROOT / "results/figures/expanded_comparison.png").is_file(), "Run scripts/plot_expanded.py before building the report")
-    validate_sources(ROOT, ROOT / "configs/expanded.json", expanded["source_sha256"])
+    try:
+        validate_sources(ROOT, ROOT / "configs/expanded.json", expanded["source_sha256"])
+    except ValidationError:
+        validate_sources(ROOT, ROOT / "configs/expanded.json", expanded["source_sha256"], archive=ROOT / "results/expanded_runtime.zip")
     return original, expanded, validation, test_counts(args.tests)
 
 

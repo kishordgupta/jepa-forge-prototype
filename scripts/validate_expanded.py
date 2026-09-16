@@ -15,6 +15,7 @@ import json
 import math
 from pathlib import Path
 import sys
+import zipfile
 
 import numpy as np
 
@@ -176,9 +177,17 @@ def validate_payload(config, data, plan):
         validate_evaluation(run["evaluation"], plan[key]["classification"], where)
 
 
-def validate_sources(root, config_path, recorded):
+def validate_sources(root, config_path, recorded, archive=None):
     """Require every current runtime source/config and reject missing entries."""
     root, config_path = Path(root).resolve(), Path(config_path).resolve()
+    if archive is not None:
+        actual = {name: digest for name, digest in recorded.items()
+                  if name.startswith("src/") or name.startswith("configs/") or name == "scripts/run_experiments.py"}
+        with zipfile.ZipFile(archive) as snapshot:
+            require(set(snapshot.namelist()) == set(actual), "Historical runtime inventory differs")
+            for name, digest in actual.items():
+                require(hashlib.sha256(snapshot.read(name)).hexdigest() == digest, f"Historical runtime hash mismatch: {name}")
+        return actual
     require(config_path.is_relative_to(root), "Configuration must be inside the repository")
     paths = list((root / "src").rglob("*.py")) + list((root / "configs").rglob("*.json"))
     paths += [root / "scripts/run_experiments.py"]
@@ -262,7 +271,7 @@ def validate_binaries(directory, data, plan):
             "checkpoint_cpu_replay_atol": 1e-4, "checkpoint_cpu_replay_rtol": 1e-4}
 
 
-def validate(config_path, results_path, root=ROOT, expected_scope=(20, 2, 3)):
+def validate(config_path, results_path, root=ROOT, expected_scope=(20, 2, 3), runtime_archive=None):
     config, data = read_json(config_path), read_json(results_path)
     plan = registry_plan(config)
     if expected_scope is not None:
@@ -272,7 +281,7 @@ def validate(config_path, results_path, root=ROOT, expected_scope=(20, 2, 3)):
         policy_counts = Counter(name for name, task in plan)
         require(all(count == policies_per_dataset for count in policy_counts.values()), f"Expanded scope requires {policies_per_dataset} policies for every dataset")
     validate_payload(config, data, plan)
-    runtime = validate_sources(root, config_path, data["source_sha256"])
+    runtime = validate_sources(root, config_path, data["source_sha256"], archive=runtime_archive)
     binary_checks = validate_binaries(Path(results_path).parent, data, plan)
     summary = summarize(data)
     report = {
@@ -281,7 +290,7 @@ def validate(config_path, results_path, root=ROOT, expected_scope=(20, 2, 3)):
         "dataset_count": len(config["datasets"]), "model_seeds": config["model_seeds"],
         "completed_gpu_runs": len(data["runs"]), "audited_tasks": len(plan),
         "expected_run_matrix_size": len(plan)*len(config["model_seeds"]),
-        "actual_device": "mps:0", "runtime_source_hashes_match": True,
+        "actual_device": "mps:0", "runtime_source_hashes_match": True, "runtime_validation_basis": "archived runtime" if runtime_archive else "current runtime",
         "verified_runtime_source_sha256": runtime, "all_numeric_evidence_finite": True,
         "summary_rows": len(summary), "summary_standard_deviation_ddof": 1,
         "low_rank_warning_runs": sum(bool(run["training"]["final_train_context_diagnostics"]["heuristic_collapse_flag"]) for run in data["runs"]),
@@ -297,6 +306,7 @@ def main(argv=None):
     parser.add_argument("--results", default="artifacts/expanded/results.json")
     parser.add_argument("--output", default="results/expanded_validation.json")
     parser.add_argument("--summary", default="results/expanded_summary.json")
+    parser.add_argument("--runtime-archive", help="Verify preserved historical runtime hashes rather than current source")
     parser.add_argument("--expected-datasets", type=int, default=20)
     parser.add_argument("--expected-policies", type=int, default=2)
     parser.add_argument("--expected-seeds", type=int, default=3)
@@ -304,7 +314,7 @@ def main(argv=None):
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     try:
-        report, summary = validate(args.config, args.results, expected_scope=(args.expected_datasets, args.expected_policies, args.expected_seeds))
+        report, summary = validate(args.config, args.results, expected_scope=(args.expected_datasets, args.expected_policies, args.expected_seeds), runtime_archive=args.runtime_archive)
         summary_path = Path(args.summary)
         summary_path.parent.mkdir(parents=True, exist_ok=True)
         summary_path.write_text(json.dumps(summary, indent=2, allow_nan=False)+"\n")

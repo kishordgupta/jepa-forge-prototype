@@ -35,7 +35,7 @@ def _array_hash(array: np.ndarray) -> str:
     return hashlib.sha256(description.encode() + array.tobytes()).hexdigest()
 
 
-def audit_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray]) -> dict:
+def audit_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray], *, development: bool = False) -> dict:
     """Return machine-readable errors/warnings without fitting on held-out rows."""
     report = {"errors": [], "warnings": [], "dataset": dataset.name, "task": task.name}
 
@@ -94,8 +94,11 @@ def audit_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray
                 add("errors", "missing_feature_times", "Forecasting requires a finite timestep for each feature.")
             elif np.max(np.asarray(times)[selected["context"]]) >= np.min(np.asarray(times)[selected["target"]]):
                 add("errors", "temporal_direction", "Every context timestep must precede every target timestep.")
+    required_splits = ("train", "val") if development else _SPLITS
+    if development:
+        report["phase"] = "development"
     valid_splits = {}
-    for name in _SPLITS:
+    for name in required_splits:
         if name not in splits:
             add("errors", "missing_split", f"Missing {name} split.", split=name)
             continue
@@ -109,15 +112,15 @@ def audit_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray
         if len(np.unique(arr)) != len(arr):
             add("errors", "duplicate_split_indices", f"{name} repeats a row.", split=name)
         valid_splits[name] = arr.astype(np.int64)
-    if set(splits) - set(_SPLITS):
-        add("errors", "unexpected_split", "Only train, val and test splits are supported.")
+    if set(splits) - set(required_splits):
+        add("errors", "unexpected_split", f"Only {required_splits} splits are supported in this phase.")
     report["splits"] = {name: len(idx) for name, idx in valid_splits.items()}
-    if len(valid_splits) == 3:
+    if len(valid_splits) == len(required_splits):
         all_indices = np.concatenate(list(valid_splits.values()))
         if len(np.unique(all_indices)) != len(all_indices):
             add("errors", "split_row_overlap", "A row occurs in more than one split.")
         if len(np.unique(all_indices)) < n:
-            add("warnings", "unassigned_rows", "Some rows are unused by all three splits.", count=n - len(np.unique(all_indices)))
+            add("warnings", "unassigned_rows", "Some rows are unused by the declared splits.", count=n - len(np.unique(all_indices)))
         seen = {}
         duplicate = None
         # Normalize signed zero so +0 and -0 do not conceal exact duplicate observations.
@@ -200,12 +203,12 @@ def audit_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray
     return report
 
 
-def compile_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray]) -> CompiledTask:
-    report = audit_task(dataset, task, splits)
+def _compile(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray], *, development: bool) -> CompiledTask:
+    report = audit_task(dataset, task, splits, development=development)
     if report["errors"]:
         codes = ", ".join(item["code"] for item in report["errors"])
         raise ValueError(f"Task audit failed: {codes}")
-    split_arrays = {name: np.asarray(splits[name], dtype=np.int64).copy() for name in _SPLITS}
+    split_arrays = {name: np.asarray(splits[name], dtype=np.int64).copy() for name in (("train", "val") if development else _SPLITS)}
     raw = np.asarray(dataset.X, dtype=np.float64)
     mean = raw[split_arrays["train"]].mean(axis=0)
     std = raw[split_arrays["train"]].std(axis=0)
@@ -226,6 +229,15 @@ def compile_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarr
     return CompiledTask(dataset, task, X, split_arrays, mean, std, report, manifest)
 
 
+def compile_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray]) -> CompiledTask:
+    return _compile(dataset, task, splits, development=False)
+
+
+def compile_development_task(dataset: RawDataset, task: TaskSpec, splits: dict[str, np.ndarray]) -> CompiledTask:
+    """Compile a physically separate train/validation dataset with no test rows."""
+    return _compile(dataset, task, splits, development=True)
+
+
 def _safe_array(value: np.ndarray, name: str) -> np.ndarray:
     array = np.asarray(value)
     if array.dtype.hasobject:
@@ -238,6 +250,8 @@ def _safe_array(value: np.ndarray, name: str) -> np.ndarray:
 
 def export_task(compiled: CompiledTask, output_dir) -> dict:
     """Write a pickle-free archive and hashed manifest; return artifact paths/hashes."""
+    if set(compiled.splits) != set(_SPLITS):
+        raise ValueError("Only finalized three-partition tasks can be exported")
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     arrays = {"raw_X": _safe_array(compiled.dataset.X, "raw_X"), "X": compiled.X,

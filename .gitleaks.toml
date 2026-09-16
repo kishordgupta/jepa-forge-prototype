@@ -1,0 +1,4 @@
+title = "JEPA-FORGE publication guard"
+
+[extend]
+useDefault = true

@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "datasets": 23,
+  "candidates": 91,
+  "gpu_training_runs": 273,
+  "checkpoint_cpu_replays": 273,
+  "validation_probe_replays": 273,
+  "checkpoint_max_absolute_error": 1.33514404296875e-05,
+  "selected_export_reloads": 23,
+  "final_selected_seed_evaluations": 69,
+  "all_test_evaluations_after_global_lock": true,
+  "low_rank_warning_runs": 198,
+  "results_sha256": "bf0fe685a9834a95d6cbffe80b0c9c2c258838f66c18e55a34dc84f2f704d63d",
+  "config_sha256": "436d6b0ec7d12c4ea369376ae7b0e0af313a67a7579ff41c4e9f691cfb9339ff",
+  "verified_executed_source_sha256": {
+    "src/jepa_forge/public_datasets.py": "a2251bbfb3ba6a8ace771c35c0a7b0507ed88a290b10fa4d39aa4b6d5b9d6b2e",
+    "src/jepa_forge/compiler.py": "4067630e96a9066378ac2fb9d95200b77a7a7b268af8313ab3313c9e9162a6e7",
+    "src/jepa_forge/evaluation.py": "cd63387d638dba0e4beb9c5db087f565a08ac79d0a74a4e8db9010456a8a4a94",
+    "src/jepa_forge/datasets.py": "e10a1a4ea900cd48e1db0c1b434d18b130a6983444394968e479fab61e28b631",
+    "src/jepa_forge/synthetic_datasets.py": "7e7b19b70858bf63d966896f9117ea7376d584105237917a8c876e819bdb7e44",
+    "src/jepa_forge/__init__.py": "fef66b1ac2c00be354980aef937732e695c76b23519b86d363fb481db232c871",
+    "src/jepa_forge/model.py": "c697f52b76d2bb068fedff34c7c69e27c3f94c67b6f13667139ac036176238e4",
+    "src/jepa_forge/experiments.py": "adbcf151131f7159c90b2022655c23a673ea589f3d4aa5740028bac2e2877136",
+    "src/jepa_forge/cli.py": "60e537899a6e35e0ecdcc9863143bae6ec48d8f1d42c02399b5a66b0fb491d4c",
+    "src/jepa_forge/selection.py": "fe0165384c57e95ee0d87801e87f0202483f84974c9379f24bfaac214c960d81",
+    "src/jepa_forge/schema.py": "8e0d85d95382b66fd82fecd634a5e23f1375948704bc4fa17527121faf47e5dd",
+    "src/jepa_forge/selection_experiments.py": "17effba6b339747faf6120934813adbdcf74128b186d597dcfc798b9ad422f72",
+    "configs/selection.json": "436d6b0ec7d12c4ea369376ae7b0e0af313a67a7579ff41c4e9f691cfb9339ff",
+    "scripts/run_selection.py": "326d16ddaebdcacf486489685325680d32e53916b1158f89fcadbb3228d3b375"
+  }
+}

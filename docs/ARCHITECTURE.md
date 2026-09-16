@@ -32,3 +32,9 @@ The training loop operates on numeric tensors. Tabular data use an MLP; Digits u
 The evaluation layer owns label-dependent probe fitting and validation selection. It compares context-matched raw, PCA, random-encoder, nonlinear, and learned representations. Full-information classification references and sensor persistence are explicitly identified. Test results flow into the final report only after the evaluated configuration is fixed.
 
 Exports use plain JSON metadata and numeric NPZ arrays rather than executable serialization. Checksums detect accidental modification or a payload mismatch; they do not establish a trusted signer. Graph, audio, event, distributed training, and production deployment components are outside this initial architecture.
+
+## Automatic task selection extension
+
+`selection.py` builds schema-only candidate masks with equal observation budgets. `DevelopmentData` contains copied train/validation features and separately stored labels; arbitrary full-dataset metadata are excluded. `compile_development_task` applies the same leakage and normalization checks with two partitions, and development-only artifacts cannot be exported as finalized three-partition tasks. `fit_validation_probe` accepts no test split. Candidate mean validation scores across seeds select a feature mask; ties use declaration order.
+
+`selection_experiments.py` completes and hashes all dataset locks before calling `evaluate_selected`. Final evaluation verifies the immutable selection/checkpoint fingerprints, compiles the selected task, reuses its weights, and verifies the JEPA probe's validation choice before reporting test scores. The CLI command is `jepa-forge select`; the experimental protocol is in `SELECTION_PROTOCOL.md`. Classification task selection is supervised by development labels even though representation training remains label-free.

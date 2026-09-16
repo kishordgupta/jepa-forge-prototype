@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+if [ -x .venv/bin/python ]; then
+  interpreter=.venv/bin/python
+else
+  interpreter=python3
+fi
+"$interpreter" scripts/check_privacy.py
+"$interpreter" scripts/check_privacy.py --history

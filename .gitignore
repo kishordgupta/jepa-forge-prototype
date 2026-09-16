@@ -11,3 +11,22 @@ artifacts/
 *.npz
 build/
 dist/
+
+# Credentials and private source material must never enter publication artifacts.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials.json
+credentials/
+.ssh/
+.aws/
+.gnupg/
+.netrc
+.npmrc
+private/
+overleaf-source/

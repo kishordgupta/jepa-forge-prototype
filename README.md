@@ -2,9 +2,15 @@
 
 A working research prototype for converting scientific datasets into explicit, validated context-target tasks and evaluating a small JEPA-style learner. It implements a bounded technical slice of the foundation-world-model ecosystem proposal.
 
-**Measured status: 23 datasets, 138 full GPU benchmark runs, and 120 passing local tests.** The original three-dataset study contains 18 runs; a requested expansion adds ten public datasets and ten distinct synthetic families with **120 additional runs**. Each dataset has two fixed policies and three model seeds, trained for 60 epochs on the Apple M3 Max GPU through PyTorch MPS. Neural training and encoding use GPU; classical baselines use CPU.
+**Current status: automatic feature-division selection across 23 datasets, 273 new GPU training runs, and 169 passing local tests.** The selector compares **91 equal-budget candidates**, trains each with three seeds for 60 epochs, and chooses by validation performance. All 23 choices are locked before final test evaluation. The selected task's checkpoints are reused for 69 seed evaluations. Together with the separate earlier 138-run fixed-policy study, the project now has **411 full GPU training runs**. Smoke runs are excluded.
 
-The expansion passed all **40 task export reloads and 120 checkpoint hash/replay checks**. Across the 20 predeclared primary tasks, JEPA's seed-mean result beats the matched raw linear baseline on **9/20**, Extra Trees on **3/20**, and a matched random encoder on **9/20**. **83/120 new runs trigger the low-rank heuristic.** These measured limitations are central to the result: the compiler and experiment pipeline work, while the small representation learner does not show a general advantage.
+The new study independently replayed **273 checkpoints and 273 validation probes**, and reloaded all **23 selected exports**. Selected JEPA representations beat the matched raw linear baseline on **13/23** datasets, Extra Trees on **5/23**, and the random encoder on **12/23**. **198/273 candidate runs trigger the low-rank heuristic.** The task-selection pipeline works; these results do not establish a general JEPA advantage. Classification task selection uses development labels, while encoder training remains label-free. Generic tabular templates require domain review.
+
+- [Automatic selection report and exact feature choices](SELECTION_REPORT.md) · [Selection PDF](output/pdf/JEPA_FORGE_Automatic_Selection_Report.pdf)
+- [All selection histories and rankings (gzip JSON)](results/selection_benchmark.json.gz) · [Summary](results/selection_summary.json) · [Independent validation](results/selection_validation.json)
+- [Predeclared selection protocol](docs/SELECTION_PROTOCOL.md) · [Privacy audit](SECURITY_AUDIT.md) · [Publication safeguards](SECURITY.md)
+
+The earlier study remains preserved: 18 original runs plus 120 runs on twenty additional datasets. Its 20 predeclared primary tasks beat raw linear on 9/20 and Extra Trees on 3/20; 83/120 runs triggered the low-rank heuristic. Historical and automatic-selection scores use different policies and splits and should not be treated as a controlled before/after improvement claim.
 
 - [Expanded 23-dataset report](EXPANDED_REPORT.md) · [Expanded PDF](output/pdf/JEPA_FORGE_Expanded_23_Dataset_Report.pdf)
 - [All expanded per-run evidence (gzip JSON)](results/expanded_benchmark.json.gz) · [240-row summary](results/expanded_summary.json) · [Independent validation](results/expanded_validation.json)
@@ -25,7 +31,8 @@ The additional public datasets are Breast Cancer (WDBC), Ionosphere, Sonar, Seme
 3. Audit malformed indices, overlap, duplicate observations across splits, declared labels/identifiers in inputs, group/window leakage and forecasting direction. Constant/copy targets produce warnings requiring review.
 4. Fit normalization on training rows and export numeric NPZ plus JSON manifests/checksums.
 5. Train a masked context encoder, predictor and frozen EMA target encoder on GPU. Context-only inference accepts context columns only.
-6. Compare frozen representations against matched raw linear, PCA, random-encoder and ExtraTrees baselines; use persistence for forecasting and a separately labelled full-input classification reference.
+6. Automatically rank schema-based, budget-matched candidate tasks on development data, write a selection lock, then evaluate the selected task on test.
+7. Compare frozen representations against matched raw linear, PCA, random-encoder and ExtraTrees baselines; use persistence for forecasting and a separately labelled full-input classification reference.
 
 This is a **JEPA-style pilot**, with custom small encoders and an explicit variance penalty. It is not an official I-JEPA reproduction. It does not provide graph/audio/event adapters, arbitrary file-format inference, plugin isolation, usability-study evidence or a complete governed ecosystem.
 
@@ -35,7 +42,9 @@ This is a **JEPA-style pilot**, with custom small encoders and an explicit varia
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install '.[dev,report]'
-pytest -q --junitxml=artifacts/pytest.xml
+python scripts/run_tests_private.py
+python scripts/install_security_tools.py
+git config core.hooksPath .githooks
 
 jepa-forge inspect wine
 jepa-forge inspect digits
@@ -48,7 +57,35 @@ jepa-forge verify artifacts/compiled/digits-center
 
 Python 3.11+ is supported. `requirements-lock.txt` records the measured macOS environment; `pyproject.toml` supplies portable dependency requirements. CPU unit tests do not require a GPU.
 
-## GPU experiments
+## Automatic task selection on GPU
+
+```bash
+jepa-forge select --config configs/selection.json --output artifacts/selection
+python scripts/validate_selection.py
+python scripts/build_selection_report.py
+```
+
+Use a fresh output directory for each run. The selector refuses to overwrite an existing lock. The predeclared study uses data seed 2026, split seed 3026, model seeds 7/17/27, and 60 epochs on the Apple M3 Max via MPS. Images compare spatial halves; sequences compare token blocks; forecasts keep a fixed final-quarter horizon and compare equal-size earlier observations. Classification ranks mean validation macro F1; forecasts rank negative validation RMSE. See the protocol for the three domain measurement groups and four band-pair templates, generic tabular hypotheses, tie rules, and information boundaries.
+
+The API separates development rows before search:
+
+```python
+from jepa_forge.datasets import load_dataset, make_splits
+from jepa_forge.model import TrainConfig
+from jepa_forge.selection import development_data, propose_candidates, select_task
+
+dataset = load_dataset("wine", seed=2026)
+splits = make_splits(dataset, seed=3026)
+development = development_data(dataset, splits)
+candidates = propose_candidates(development.dataset)
+lock = select_task(development, [TrainConfig(seed=s, device="mps") for s in (7, 17, 27)],
+                   "artifacts/my-selection", candidates)
+print(lock["selected_task"])
+```
+
+`select_task` accepts only development data and never evaluates test rows. The `select` CLI coordinates the subsequent locked evaluation and baselines. Classification labels fit probes and select tasks, so this is not fully unsupervised feature selection. The feature masks are constrained hypotheses; this prototype does not infer causal importance or guarantee scientific suitability.
+
+## Earlier fixed-policy GPU experiments
 
 ```bash
 python scripts/verify_environment.py
@@ -106,8 +143,12 @@ For a custom numeric dataset, construct `RawDataset`, `TaskSpec` and explicit tr
 
 ## Artifacts and evidence
 
-`results/` contains measured evidence and hashes, including the complete expanded JSON compressed with gzip. Use `gzip.open("results/expanded_benchmark.json.gz", "rt")` with `json.load` to inspect it. `results/original_runtime.zip` preserves the exact original runtime; the expansion records its updated runtime separately. Large compiled arrays, per-run histories and tensor-only checkpoints are retained under local `artifacts/benchmark/` and `artifacts/expanded/`, excluded from Git, and reproducible from source. `scripts/package_artifacts.py` creates a local archive with code, report, public/synthetic compiled arrays and trained checkpoints. Hashes detect changed bytes, not authorship or trusted provenance.
+`results/` contains measured evidence and hashes, including the complete expanded JSON compressed with gzip. Use `gzip.open("results/expanded_benchmark.json.gz", "rt")` with `json.load` to inspect it. `results/original_runtime.zip` and `results/expanded_runtime.zip` preserve the exact historical runtimes. To revalidate the retained expansion after code changes, add `--runtime-archive results/expanded_runtime.zip` to `scripts/validate_expanded.py`; fresh experiments can validate against current source. Large compiled arrays, per-run histories and tensor-only checkpoints are retained under local `artifacts/benchmark/` , `artifacts/expanded/` and `artifacts/selection/`, excluded from Git, and reproducible from source. `scripts/package_artifacts.py` creates a local archive with code, report, public/synthetic compiled arrays and trained checkpoints. Hashes detect changed bytes, not authorship or trusted provenance.
 
 The reports describe limits including tiny test sets, missing writer/speaker/geographic identifiers, synthetic-only forecasting claims, one fixed split and incomplete modality/community support. The proposal's existing numeric results are not reused as measurements here.
 
 Original prototype code is Apache-2.0 licensed. Public datasets retain their own licenses and attribution in [DATASETS.md](docs/DATASETS.md) and [expanded public dataset documentation](docs/PUBLIC_DATASETS_EXPANDED.md).
+
+## Publication and privacy
+
+This repository remains private. Commit and push hooks scan staged files and reachable publication history using a checksum-pinned Gitleaks release and metadata rules, including archive/PDF contents. CI repeats the checks. The audit found no credentials under these scans; two historical test reports contained a personal machine name and were anonymized, with the affected branch ancestry replaced. Previously uploaded objects or downloaded copies cannot be guaranteed erased. Native push protection was not offered by the observed repository settings, and GitHub states branch protections are not enforced for this private repository's current account setup. See [SECURITY_AUDIT.md](SECURITY_AUDIT.md) for the exact scope and remaining limits.

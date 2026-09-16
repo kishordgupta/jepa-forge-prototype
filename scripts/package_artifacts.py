@@ -9,11 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     files = []
-    for folder in ("src/jepa_forge", "tests", "scripts", "configs", "docs", "results", "output/pdf", "artifacts/benchmark", "artifacts/expanded"):
+    for folder in ("src/jepa_forge", "tests", "scripts", "configs", "docs", "results", "output/pdf", "artifacts/benchmark", "artifacts/expanded", "artifacts/selection", ".githooks"):
         for path in (ROOT / folder).rglob("*"):
             if path.is_file() and "__pycache__" not in path.parts:
                 files.append(path)
-    for name in ("README.md", "REPORT.md", "EXPANDED_REPORT.md", "LICENSE", "pyproject.toml", "requirements-lock.txt", ".gitignore", ".gitattributes", ".github/workflows/tests.yml"):
+    for name in ("README.md", "REPORT.md", "EXPANDED_REPORT.md", "SELECTION_REPORT.md", "SECURITY.md", "SECURITY_AUDIT.md", ".gitleaks.toml", "LICENSE", "pyproject.toml", "requirements-lock.txt", ".gitignore", ".gitattributes", ".github/workflows/tests.yml"):
         path = ROOT / name
         if path.exists():
             files.append(path)

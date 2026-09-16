@@ -1,4 +1,4 @@
-"""Human-reviewed task choice and reproducible compilation."""
+"""Task inspection, validation-only automatic selection, and reproducible compilation."""
 import argparse
 import json
 from pathlib import Path
@@ -23,7 +23,14 @@ def main(argv=None):
     benchmark = subs.add_parser("benchmark", help="Run fixed, documented experiments.")
     benchmark.add_argument("--config", default="configs/benchmark.json")
     benchmark.add_argument("--output", default="artifacts/benchmark")
+    selection = subs.add_parser("select", help="Run validation-only task search and locked final evaluation.")
+    selection.add_argument("--config", default="configs/selection.json")
+    selection.add_argument("--output", default="artifacts/selection")
     args = parser.parse_args(argv)
+    if args.command == "select":
+        from .selection_experiments import run_selection_benchmark
+        run_selection_benchmark(args.config, args.output)
+        return
     if args.command == "benchmark":
         from .experiments import run_benchmark
         run_benchmark(args.config, args.output)
