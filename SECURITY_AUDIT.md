@@ -1,5 +1,7 @@
 # Repository privacy audit - September 16, 2026
 
+**Publication status, September 16, 2026:** the extension is published on `automatic-task-selection`. Replacing `main` is pending explicit user approval after automatic approval review rejected the force update. The old reports remain reachable through `main`. GitHub CI confirms zero current-file findings and flags those two historical reports.
+
 Scope: `kishordgupta/jepa-forge-prototype`, its published branch ancestry, the corresponding local source history, and the new publication snapshot. This is not an audit of every repository or service in the owner's account.
 
 ## Findings
@@ -11,7 +13,7 @@ Scope: `kishordgupta/jepa-forge-prototype`, its published branch ancestry, the c
 
 ## Remediation
 
-The two XML files have been anonymized; experiment scores and test outcomes are unchanged. Their affected publication checksum was regenerated. A clean historical snapshot is preserved as commit `986d88b6e217ab281263bcac8808532222a27718`, with tree `a41c757dbf4224416e0d190779965a3767202098`, based on the original clean initialization commit. The automatic-selection publication is based on that sanitized ancestry and replaces the affected main-branch history. The old metadata-bearing commit is not an ancestor of the new publication.
+The two XML files have been anonymized; experiment scores and test outcomes are unchanged. Their affected publication checksum was regenerated. A clean historical snapshot is preserved as commit `986d88b6e217ab281263bcac8808532222a27718`, with tree `a41c757dbf4224416e0d190779965a3767202098`, based on the original clean initialization commit. The automatic-selection review branch is based on that sanitized ancestry. The old metadata-bearing commit is not an ancestor of the review branch. Replacing main with this lineage is prepared but has not been performed; the old commit remains reachable through main pending the owner's explicit approval.
 
 The local `main` history has also been rebuilt from the sanitized snapshot. An ignored local recovery bundle and tool-owned recovery references remain local; they are excluded from publication and from the definition of publishable branches/tags. No real credential was found, so no account key was revoked or rotated.
 
@@ -34,3 +36,7 @@ GitHub's Advanced Security settings did not offer native secret-scanning or push
 Local hooks can be bypassed; API/UI uploads do not invoke them. CI starts after content reaches GitHub. These controls reduce risk but cannot guarantee that every future action is free of sensitive information. The validated publication process must run the local scan before uploading objects. Pixels inside images and arbitrary unstructured meaning are outside the scanner's automated coverage.
 
 GitHub commit authorship continues to show the owner's existing public GitHub identity. This is normal repository attribution, not a credential. Local commits use GitHub's noreply address rather than a personal email.
+
+## Verified review-branch CI
+
+[GitHub Actions run 35142228793](https://github.com/kishordgupta/jepa-forge-prototype/actions/runs/35142228793) tested the extension commit `785fdb2a48dee0798a0413db4fab160e1ac676e6`: **149 tests passed, 20 cache-dependent public-data integration checks skipped**. The current staged snapshot passed with 94 files and zero findings. The all-branch history scan found zero credential matches and failed on the two metadata-bearing XML blobs still reachable through main. This failure is retained as an accurate signal; no allowlist was added to suppress the historical finding.
