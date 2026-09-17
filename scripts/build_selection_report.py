@@ -82,7 +82,7 @@ def main():
                "These descriptive comparisons do not establish statistical significance or a general JEPA advantage. "
                "Unselected candidates were not scored on test, so this study does not estimate test-set improvement over every possible feature division.")
     security = ("The privacy audit found no credentials under the applied scans. Two historical JUnit reports contained a personal machine name; "
-                "their published replacements remove that metadata. A sanitized replacement for the affected branch ancestry is prepared; main-history replacement is pending explicit approval. "
+                "their published replacements remove that metadata. With the owner's explicit approval, main now uses the sanitized automatic-selection ancestry; the metadata-bearing commit is no longer in either branch's history. "
                 "Gitleaks and metadata checks cover staged files, branch history, archives, and PDF text; a fake credential was correctly blocked. "
                 "Local commit/push hooks and GitHub CI repeat the checks. GitHub's settings state branch protection is not enforced for this private repository's current account setup; "
                 "native secret-scanning/push-protection controls were not offered in the observed settings. "

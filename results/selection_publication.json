@@ -2,8 +2,8 @@
   "result_uncompressed_sha256": "bf0fe685a9834a95d6cbffe80b0c9c2c258838f66c18e55a34dc84f2f704d63d",
   "published_files_sha256": {
     "results/selection_benchmark.json.gz": "8911411658942314faa0f9356f2d065991ac7cda3c91ad11c9ab6e250e1d7549",
-    "SELECTION_REPORT.md": "37baa2b6935efd1ea2421e4a39d3301d381d1355f72df7a8abb5732b6911c6c5",
-    "output/pdf/JEPA_FORGE_Automatic_Selection_Report.pdf": "a1efe3a0818da33566cb6daa588701f2733673b99669b08e19adc3d69b735eed",
+    "SELECTION_REPORT.md": "f9dedaf69b830fb0c8f33ad5bed625a0f50f4c8123d10ce75798ef6fe2cff3b2",
+    "output/pdf/JEPA_FORGE_Automatic_Selection_Report.pdf": "5852d0639921ab184c851b0d51b23a35d2d01a6cfd1212317a2ac8b0244105a9",
     "results/selection_summary.json": "948c4a789564888e77f5bd359c373557f0c407bb6f9bdc6ebfa8d0dc2f81df56",
     "results/selection_validation.json": "1828cd90fdf5236644ba2a2b118516cdec753dd61f5a528fa487bdf27d37267c",
     "results/selection_test_report.xml": "5463ff1df34e5a65f40d2bfac027f0858c45cb6bde634c5e642097336f427869"
