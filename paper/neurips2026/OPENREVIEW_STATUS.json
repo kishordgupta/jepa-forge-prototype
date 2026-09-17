@@ -1,0 +1,22 @@
+{
+  "checked_date": "2026-09-17",
+  "source_url": "https://api2.openreview.net/groups?id=NeurIPS.cc/2026/Workshop/PhysWorldAI",
+  "public_group_id": "NeurIPS.cc/2026/Workshop/PhysWorldAI",
+  "public_venue_fields": {
+    "title": {
+      "value": "The 1st Workshop on Physical World AI: Geometry, Characteristics, and Multimodal Sensing (NeurIPS 2026)"
+    },
+    "location": {
+      "value": "Atlanta, Georgia, United States"
+    },
+    "date": {
+      "value": "Submission Start: Aug 01 2026 11:59PM UTC-0, Submission Deadline: Sep 12 2026 11:59PM UTC-0"
+    },
+    "submission_id": {
+      "value": "NeurIPS.cc/2026/Workshop/PhysWorldAI/-/Submission"
+    },
+    "start_date": {
+      "value": "Dec 12 2026"
+    }
+  }
+}

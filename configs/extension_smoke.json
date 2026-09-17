@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    "wine",
+    "synthetic_sensors"
+  ],
+  "data_seed": 2026,
+  "split_seeds": [
+    94026
+  ],
+  "model_seed": 7,
+  "epochs_per_candidate": 1,
+  "batch_size": 128,
+  "device": "mps",
+  "neural_methods": [
+    "jepa",
+    "supervised",
+    "tabm"
+  ],
+  "classical_methods": [
+    "linear",
+    "extra_trees",
+    "catboost"
+  ],
+  "catboost_iterations": 3,
+  "notes": "New repeated split extension; fixed and selection JEPA policies match total optimizer updates and probe fit counts. External pretrained models are a separate transfer study."
+}

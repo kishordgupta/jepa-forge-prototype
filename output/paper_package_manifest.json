@@ -1,0 +1,17 @@
+{
+  "status": "author_review_draft_not_submitted",
+  "overleaf": {
+    "files": 21,
+    "bytes": 91037,
+    "sha256": "47fec4f620ab2ae416b2fa531d439cd98a9121fdd208ee9a733b68d804ca82f9"
+  },
+  "anonymous_artifact": {
+    "files": 107,
+    "bytes": 4092011,
+    "sha256": "0f14096b48f4040dc856850753cd4b87557eed74945ab4ef1c000c683950a56c"
+  },
+  "pdf": {
+    "bytes": 132952,
+    "sha256": "0d7e512f825886cff5b457ea6abded086907924fe8a7cd5c149399d4932cdbd4"
+  }
+}

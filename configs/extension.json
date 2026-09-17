@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    "wine",
+    "digits",
+    "synthetic_sensors",
+    "breast_cancer",
+    "ionosphere",
+    "sonar",
+    "semeion",
+    "letter",
+    "pendigits",
+    "satimage",
+    "har",
+    "dry_bean",
+    "isolet",
+    "synthetic_lorenz",
+    "synthetic_mackey_glass",
+    "synthetic_switching_var",
+    "synthetic_chirp_seasonal",
+    "synthetic_coupled_oscillators",
+    "synthetic_nonlinear_ar",
+    "synthetic_nonlinear_multiview",
+    "synthetic_hierarchical_multiclass",
+    "synthetic_sparse_interactions",
+    "synthetic_manifold_nuisance",
+    "mhealth_activity",
+    "mhealth_forecast",
+    "pamap2_activity",
+    "pamap2_forecast"
+  ],
+  "data_seed": 2026,
+  "split_seeds": [
+    4026,
+    5026,
+    6026
+  ],
+  "model_seed": 7,
+  "epochs_per_candidate": 30,
+  "batch_size": 128,
+  "device": "mps",
+  "neural_methods": [
+    "jepa",
+    "supervised",
+    "tabm"
+  ],
+  "classical_methods": [
+    "linear",
+    "extra_trees",
+    "catboost"
+  ],
+  "catboost_iterations": 100,
+  "notes": "New repeated split extension; fixed and selection JEPA policies match total optimizer updates and probe fit counts. External pretrained models are a separate transfer study."
+}

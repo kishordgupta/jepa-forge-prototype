@@ -4,6 +4,14 @@
 
 Scope: `kishordgupta/jepa-forge-prototype`, its published branch ancestry, the corresponding local source history, and the new publication snapshot. This is not an audit of every repository or service in the owner's account.
 
+## September 17 experiment and manuscript extension
+
+Before publication, the new extension, official-model transfer results, manuscript PDF, LaTeX archive, and anonymous evidence archive passed the working-tree guard: **150 publication candidates, 298 extracted text records, zero credential or private-metadata findings**. Archive manifests were verified, and a fresh extraction regenerated all 12 new evidence outputs byte for byte. The expanded local test suite passed all 173 tests. Separate experiment checks replayed 1,392 CPU/MPS checkpoint snapshots and rescored 1,044 saved test prediction files.
+
+The existing reachable history was also rechecked: 116 unique blobs and 138 extracted records passed, and Gitleaks 8.30.1 found no leaks in the four reachable commits. The staged-snapshot hook and post-commit history scan are part of this publication procedure. Raw downloaded archives, model checkpoints, local cache links, private project URLs, recovery files and host-identifying metadata are excluded from publication. The repository keeps its existing visibility and sanitized ancestry; this update is an ordinary fast-forward commit.
+
+These are bounded scan and integrity results. They do not guarantee the absence of every possible sensitive fact, erase retained historical objects, or replace the existing safeguards for future uploads. GitHub Actions repeats the checks on the published revision; its status must be assessed separately from the local results.
+
 ## Findings
 
 * **No credentials detected** by Gitleaks 8.30.1 in the two original local commits, or by Gitleaks plus metadata checks across 82 unique historical blobs (91 extracted text records). This is a bounded scan result, not proof that arbitrary sensitive content can never be present.

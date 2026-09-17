@@ -1,0 +1,18 @@
+{
+  "cpu_gpu_atol": 0.0005,
+  "cpu_gpu_checkpoint_replays": 1284,
+  "cpu_gpu_max_absolute_error": 4.38690185546875e-05,
+  "cpu_gpu_rtol": 0.0005,
+  "gpu_checkpoint_records": 1284,
+  "matched_policy_budgets": 81,
+  "replay_samples_per_checkpoint": 8,
+  "result_compressed_sha256": "613d0251c2402f82cceca9c64e5cf780bf8074ec27dd12b6fc927aa7d9a0aab1",
+  "result_uncompressed_sha256": "69226028e26d39255cb6ed8ffe95933176f3855f873019a8aa7d5f201648fdd5",
+  "saved_test_predictions_recomputed": 945,
+  "scope": "Actual local checkpoints and prediction files verified. The lightweight published archive retains results/hashes and this report, not the large checkpoint collection.",
+  "selected_evaluations": 945,
+  "source_files_verified": 13,
+  "status": "passed",
+  "task_splits": 81,
+  "validation_metrics_replayed_in_final_runner": true
+}

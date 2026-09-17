@@ -1,0 +1,10 @@
+{
+  "datasets": ["digits", "semeion", "synthetic_motion_video"],
+  "image_sample_count": 600,
+  "data_seed": 9026,
+  "split_seeds": [4026, 5026, 6026],
+  "epochs_per_candidate": 30,
+  "device": "mps",
+  "image_batch_size": 4,
+  "video_batch_size": 1
+}

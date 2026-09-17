@@ -2,9 +2,34 @@
 
 A working research prototype for converting scientific datasets into explicit, validated context-target tasks and evaluating a small JEPA-style learner. It implements a bounded technical slice of the foundation-world-model ecosystem proposal.
 
-**Current status: automatic feature-division selection across 23 datasets, 273 new GPU training runs, and 169 passing local tests.** The selector compares **91 equal-budget candidates**, trains each with three seeds for 60 epochs, and chooses by validation performance. All 23 choices are locked before final test evaluation. The selected task's checkpoints are reused for 69 seed evaluations. Together with the separate earlier 138-run fixed-policy study, the project now has **411 full GPU training runs**. Smoke runs are excluded.
+## Repeated-split extension and workshop manuscript
 
-The new study independently replayed **273 checkpoints and 273 validation probes**, and reloaded all **23 selected exports**. Selected JEPA representations beat the matched raw linear baseline on **13/23** datasets, Extra Trees on **5/23**, and the random encoder on **12/23**. **198/273 candidate runs trigger the low-rank heuristic.** The task-selection pipeline works; these results do not establish a general JEPA advantage. Classification task selection uses development labels, while encoder training remains label-free. Generic tabular templates require domain review.
+The expanded comparison implements raw sensor trajectories with source/subject provenance, repeated group splits, independent baseline mask selection, direct supervised encoders, official TabM and CatBoost implementations, train-only feature-selection controls, and a fixed-mask JEPA control with matched optimizer updates and probe-fit counts. The main extension covers **27 tasks on 25 underlying datasets across three splits**, with **1,044 neural training trajectories**. A separate frozen-transfer study evaluates **official I-JEPA and V-JEPA** on two image subsets and a synthetic-video task, alongside **81 scratch training trajectories**. External foundation-model pretraining is not compute-matched to the pilot. The current local test suite has **173 passing tests**.
+
+- [Expanded experiment report](EXTENSION_REPORT.md) and [predeclared extension protocol](docs/EXTENSION_PROTOCOL.md)
+- [Official-model transfer protocol](docs/VISION_TRANSFER_PROTOCOL.md)
+- [Extension results](results/extension_benchmark.json.gz) and [independent replay report](results/extension_benchmark_validation.json)
+- [Transfer results](results/vision_transfer.json.gz) and [independent replay report](results/vision_transfer_validation.json)
+- [Workshop LaTeX source](paper/neurips2026/main.tex), [compiled paper](output/pdf/JEPA_FORGE_NeurIPS2026_Workshop_Paper.pdf), and [Overleaf import ZIP](output/JEPA_FORGE_NeurIPS2026_Overleaf.zip)
+
+The paper is an anonymous author-review draft, not a submitted or accepted paper. Its tables are generated from frozen measured results. Group splits, per-split predictions, mask choices and GPU evidence are retained locally; the published lightweight payload includes results and hashes, not raw archives or large checkpoints. `requirements-extension-lock.txt` records the measured extension environment.
+
+```bash
+python -m pip install '.[dev,report,experiments]'
+PYTHONPATH=src python scripts/run_extension.py --output artifacts/new_extension
+PYTHONPATH=src python scripts/validate_extension.py --directory artifacts/new_extension
+PYTHONPATH=src python scripts/run_vision_transfer.py --output artifacts/new_vision
+PYTHONPATH=src python scripts/validate_extension.py --directory artifacts/new_vision --vision
+PYTHONPATH=src python paper/neurips2026/build_extension_evidence.py
+```
+
+These experiment configurations require MPS and reject silent CPU fallback. Classical models, preprocessing and probes use CPU. Use fresh output directories. To use a different accelerator, change the configuration explicitly and label the new run separately.
+
+## Earlier studies
+
+**Historical automatic-selection study: 23 datasets, 273 GPU training runs, and 169 passing tests at that snapshot.** The selector compares **91 equal-budget candidates**, trains each with three seeds for 60 epochs, and chooses by validation performance. All 23 choices are locked before final test evaluation. The selected task's checkpoints are reused for 69 seed evaluations. Together with the separate earlier 138-run fixed-policy study, these two historical studies contain **411 full GPU training runs**, separate from the new extension above. Smoke runs are excluded.
+
+That historical study independently replayed **273 checkpoints and 273 validation probes**, and reloaded all **23 selected exports**. Selected JEPA representations beat the matched raw linear baseline on **13/23** datasets, Extra Trees on **5/23**, and the random encoder on **12/23**. **198/273 candidate runs trigger the low-rank heuristic.** The task-selection pipeline works; these results do not establish a general JEPA advantage. Classification task selection uses development labels, while encoder training remains label-free. Generic tabular templates require domain review.
 
 - [Automatic selection report and exact feature choices](SELECTION_REPORT.md) · [Selection PDF](output/pdf/JEPA_FORGE_Automatic_Selection_Report.pdf)
 - [All selection histories and rankings (gzip JSON)](results/selection_benchmark.json.gz) · [Summary](results/selection_summary.json) · [Independent validation](results/selection_validation.json)

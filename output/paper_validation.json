@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "checked_date": "2026-09-17",
+  "draft_not_submitted": true,
+  "pdf_sha256": "0d7e512f825886cff5b457ea6abded086907924fe8a7cd5c149399d4932cdbd4",
+  "pages": {
+    "main": 7,
+    "references": 1,
+    "appendices": 5,
+    "total": 13
+  },
+  "visual_review": "All 13 pages inspected; final changed pages reinspected.",
+  "no_unresolved_references_or_replacement_glyphs": true,
+  "source_archive_manifest_verified": true,
+  "evidence_archive_manifest_verified": true,
+  "packaged_builder_output_files_identical": 12,
+  "current_local_tests": {
+    "passed": 173,
+    "source": "results/extension_test_report.xml"
+  },
+  "main_validation": "results/extension_benchmark_validation.json",
+  "transfer_validation": "results/vision_transfer_validation.json",
+  "large_checkpoints_included": false,
+  "owner_identifiers_absent_from_pdf_metadata": true,
+  "prepublication_privacy_scan": {
+    "status": "passed",
+    "mode": "worktree",
+    "files_or_blobs": 150,
+    "extracted_text_records": 298,
+    "credential_findings": 0,
+    "findings": [],
+    "limits": "Pattern scanning is not a guarantee against all sensitive information; binary pixels are not OCR scanned."
+  }
+}
